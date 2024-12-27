@@ -6,9 +6,27 @@ export function Card({ name, id }) {
     element: "div",
     children: [
       El({
-        element: "p",
-        innerText: name,
+        element: "div",
+        children: [
+          El({
+            element: "p",
+            innerText: name,
+          }),
+          El({
+            element: "button",
+            innerText: "جزییات بیشتر",
+            eventListener: [
+              {
+                event: "click",
+                callback: () => {
+                  location.href = `../../pages/product/product.html?id=${id}`;
+                },
+              },
+            ],
+          }),
+        ],
       }),
+
       El({
         element: "div",
         children: [

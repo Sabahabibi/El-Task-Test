@@ -1,9 +1,12 @@
+import { Form } from "../../components/form/Form.js";
+import { List } from "../../components/list/List.js";
 import { El } from "../../utils/El.js";
-import { HomeMain } from "./main/Main.js";
 
-export function HomePage() {
+export async function HomePage() {
+  const listComponent = await List();
+
   return El({
-    element: "div",
-    children: [HomeMain()],
+    element: "main",
+    children: [Form(), listComponent],
   });
 }
