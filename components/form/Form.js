@@ -10,6 +10,6 @@ export function Form() {
       Input({ placeholder: "Enter your Email!", name: "userEmail" }),
       Button({ text: "add user", type: "submit" }),
     ],
-    className: "flex flex-col items-center justify-center gap-[30px] pt-6",
+    className: "flex  gap-[30px] pt-6",
   });
 }

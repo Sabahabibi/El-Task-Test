@@ -6,6 +6,11 @@ export function Card({ name, id }) {
     element: "div",
     children: [
       El({
+        element: "a",
+        href: `product/${id}`,
+        innerText: "Product",
+      }),
+      El({
         element: "p",
         innerText: name,
       }),
