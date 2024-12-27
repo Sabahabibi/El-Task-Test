@@ -34,10 +34,10 @@ export function El({
   return elem;
 }
 // //example
-// El({
-//   element: "div",
-//   children: [
-//     El({ element: "div", children: "FirstDiv" }),
-//     El({ element: "div", children: "SrcoundDiv" }),
-//   ],
-// });
+export function getUrlParams() {
+  const params = new URLSearchParams(window.location.search);
+  return {
+    id: params.get("id"),
+    // add other params here if needed
+  };
+}

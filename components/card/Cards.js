@@ -7,7 +7,7 @@ export function Card({ name, id }) {
     children: [
       El({
         element: "a",
-        href: `product/${id}`,
+        href: `../pages/product/product.html?id=${id}`,
         innerText: "Product",
       }),
       El({
